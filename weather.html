@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Weather</title>
+	<!-- To ensure compatability with various devices !-->
+  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  	<meta name="viewport" content="width=device-width">
+	
+	<!--	Linking JS and JQuery-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<script src = "script.js"></script>
+	
+	<!--	Linking css file-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body id = "background">
+	
+
+	<!-- Credit to mgkOV on codepen for the sun - https://codepen.io/mgkOV/pen/qzNegg -->
+	<div class="sun">
+    <div class="ray_box">
+        <div class="ray ray1"></div>
+        <div class="ray ray2"></div>
+        <div class="ray ray3"></div>
+        <div class="ray ray4"></div>
+        <div class="ray ray5"></div>
+        <div class="ray ray6"></div>
+        <div class="ray ray7"></div>
+        <div class="ray ray8"></div>
+        <div class="ray ray9"></div>
+        <div class="ray ray10"></div>
+	</div>
+    </div>
+
+	<div id = "date-box">
+		<p id = "Date"> </p>
+	</div>
+	
+	<div id = "time-box">
+		<p id = "Time"> </p>
+	</div>
+	
+	<div id = "location-box">
+		<img src = "Images/location.png" id = "location-img">
+		<p id = "Location"> </p>
+	</div>
+	
+	<div id = "weather-box">
+		<img src = "#" id = "weather-img">
+		<p id = "Description">  </p>
+		
+		<img src = "Images/humid.png" id = "humid-img">
+		<p id = "Humidity"> </p>
+		
+		<p id = "celsius-text"> °C </p>
+		<p id = "farhenheit-text"> °F </p>
+		<p id = "slash"> / </p>
+		<p id = "Temp"> </p>
+		
+		
+	</div>
+	
+	<div id = "weekly-weather-box">
+		
+		<div id = "day-1"> 
+			<p id = "date-1"> 27 </p> 
+			<img src = "#" id = "day-1-img">
+			<p id = "day-1-text"></p> 
+			<p id = "day-1-max-temp"> 37 </p> 
+			<p id = "day-1-min-temp"> 22 </p> 
+			<div id = "divider"> </div></div>
+		
+		<div id = "day-2">
+			<p id = "date-2"> 27 </p>
+			<img src = "#" id = "day-2-img">
+			<p id = "day-2-text"></p> 
+			<p id = "day-2-max-temp"> 37 </p> 
+			<p id = "day-2-min-temp"> 22 </p> 
+			<div id = "divider-2"> </div> </div>
+		
+		<div id = "day-3">
+			<p id = "date-3"> 27 </p> 
+			<img src = "#" id = "day-3-img"> 
+			<p id = "day-3-text"></p>
+			<p id = "day-3-max-temp"> 37 </p> 
+			<p id = "day-3-min-temp"> 22 </p>
+			<div id = "divider"> </div> </div>
+		
+		<div id = "day-4">
+			<p id = "date-4"> 27 </p>
+			<img src = "#" id = "day-4-img">
+			<p id = "day-4-text"></p> 
+			<p id = "day-4-max-temp"> 37 </p> 
+			<p id = "day-4-min-temp"> 22 </p>
+			<div id = "divider"> </div></div>
+		
+		<div id = "day-5">
+			<p id = "date-5"> 27 </p>
+			<img src = "#" id = "day-5-img"> 
+			<p id = "day-5-text"></p> 
+			<p id = "day-5-max-temp"> 37 </p>
+			<p id = "day-5-min-temp"> 22 </p> 
+			<div id = "divider"> </div></div>
+		
+		<div id = "day-6">
+			<p id = "date-6"> 27 </p>
+			<img src = "#" id = "day-6-img">
+			<p id = "day-6-text"></p>
+			<p id = "day-6-max-temp"> 37 </p> 
+			<p id = "day-6-min-temp"> 22 </p>
+			<div id = "divider"> </div></div>
+		
+		<div id = "day-7">
+			<p id = "date-7"> 27 </p>
+			<img src = "#" id = "day-7-img">
+			<p id = "day-7-text"></p> <p id = "day-7-max-temp">
+			37 </p> <p id = "day-7-min-temp"> 22 </p>
+		
+	</div>	
+</body>
+</html>
