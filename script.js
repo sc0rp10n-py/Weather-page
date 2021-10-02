@@ -1,4 +1,4 @@
-// JavaScript Document
+ // JavaScript Document
 
 var ip;
 var city;
@@ -180,7 +180,6 @@ var getWeather = function()
 	
 	
 }
-
 var set_Image_Icon = function(img_icon) {
 	$("#weather-box").fadeIn(1000);
 	$("#weather-img").attr('src', "http://openweathermap.org/img/wn/" + img_icon[0] + img_icon[1] +  "d@2x.png");
@@ -207,7 +206,7 @@ var get_week_weather = function()
           },
 		
 		success: function(response) {
-			console.log(response);
+			// console.log(response);
 		
 			$("#day-1-img").attr('src', "http://openweathermap.org/img/wn/" + response.list[0].weather[0].icon+ "@2x.png");
 			$("#day-2-img").attr('src', "http://openweathermap.org/img/wn/" + response.list[1].weather[0].icon+ "@2x.png");
@@ -336,6 +335,21 @@ var setBg = function() {
 	}
 }
 
+function searchLocation(ele) {
+	// var x = document.getElementById("search-text").value;
+	// console.log(x);
+	if(event.key == 'Enter')
+	{
+		var x = ele.value;
+		region = titleCase(x);
+		$("#Location").html(region).fadeIn(1000);
+		getWeather();
+		get_week_weather();	
+	}
+	
+	
+}
+
 $(document).ready(function() {
 	getLocation();
 	getTime();
@@ -343,7 +357,13 @@ $(document).ready(function() {
 	setBg();
 	setTimeout(getWeather,1000)
 	setTimeout(get_week_weather,1000);
-	
+
+	const searchBox = document.getElementById('searchBox'),
+  googleIcon = document.getElementById('googleIcon');
+
+googleIcon.onclick = function () {
+  searchBox.classList.toggle('active');
+};
 
 	$("#farhenheit-text").click(function() {
 		temp = "F";
@@ -360,4 +380,5 @@ $(document).ready(function() {
 		getWeather();
 		get_week_weather();
 	}) 
-})
+});
+

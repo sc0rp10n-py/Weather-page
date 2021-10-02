@@ -16,6 +16,7 @@
 	<!--	Linking css file-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 	<link href="style.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body id = "background">
@@ -44,7 +45,17 @@
 	<div id = "time-box">
 		<p id = "Time"> </p>
 	</div>
-	
+
+	<!-- <input type = "text" placeholder="Search" id = "search-text"> 
+	<button onclick="searchLocation()"><i class = "fa fa-search"></i> </button> -->
+
+	<div class="hero">
+		<div id="searchBox">
+		  <i class="fa fa-search fa-3x" id="googleIcon"></i>
+		  <input type="text" placeholder="Search location..." onkeydown="searchLocation(this)"/>
+		</div>
+	  </div>
+
 	<div id = "location-box">
 		<img src = "Images/location.png" id = "location-img">
 		<p id = "Location"> </p>
@@ -122,5 +133,8 @@
 			37 </p> <p id = "day-7-min-temp"> 22 </p>
 		
 	</div>	
+
+    <script src="script.js"></script>
+  </body>
 </body>
 </html>
